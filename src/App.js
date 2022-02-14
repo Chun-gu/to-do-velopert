@@ -1,15 +1,18 @@
 import GlobalStyle from "./GlobalStyle";
 import { TodoTemplate, TodoHead, TodoList, TodoCreate } from "./components";
+import ContextProvider from "./context/ContextProvider";
 
 function App() {
   return (
     <>
-      <GlobalStyle />
-      <TodoTemplate>
-        <TodoHead />
-        <TodoList />
-        <TodoCreate />
-      </TodoTemplate>
+      <ContextProvider>
+        <GlobalStyle />
+        <TodoTemplate>
+          <TodoHead />
+          <TodoList />
+          <TodoCreate />
+        </TodoTemplate>
+      </ContextProvider>
     </>
   );
 }
